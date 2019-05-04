@@ -26,7 +26,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def get_housekeepere_event():
     log.info('Housekeeper: %s', request.json)
-
+    return 'ok'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
