@@ -6,7 +6,7 @@ from sys import stdout
 import pytz
 import requests
 import sentry_sdk
-from flask import Flask, Response, abort
+from flask import Flask, Response, abort, request
 from icalendar import Calendar, Event
 from sentry_sdk.integrations.flask import FlaskIntegration
 
