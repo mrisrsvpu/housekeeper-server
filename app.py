@@ -1,6 +1,7 @@
 import logging
 from datetime import datetime, timedelta
 from json import JSONDecodeError
+from sys import stdout
 
 import pytz
 import requests
@@ -10,6 +11,7 @@ from icalendar import Calendar, Event
 from sentry_sdk.integrations.flask import FlaskIntegration
 
 log = logging.getLogger(__name__)
+log.addHandler(logging.StreamHandler(stdout))
 
 try:
     sentry_sdk.init(
