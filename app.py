@@ -11,6 +11,7 @@ from icalendar import Calendar, Event
 from sentry_sdk.integrations.flask import FlaskIntegration
 
 log = logging.getLogger(__name__)
+log.setLevel(logging.DEBUG)
 log.addHandler(logging.StreamHandler(stdout))
 
 try:
